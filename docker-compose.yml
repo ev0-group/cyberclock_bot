@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  cyberclock-bot:
+    build: .
+    container_name: cyberclock-bot
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+    volumes:
+      - ./assets:/app/assets
+    restart: always
